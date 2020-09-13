@@ -1,0 +1,305 @@
+//bootstrap configuratin start
+
+// Ratios for typography
+$double-octave: 4;
+$pi: 3.14159265359;
+$major-twelfth: 3;
+$major-eleventh: 2.666666667;
+$major-tenth: 2.5;
+$octave: 2;
+$major-seventh: 1.875;
+$minor-seventh: 1.777777778;
+$major-sixth: 1.666666667;
+$phi: 1.618034;
+$golden: $phi;
+$minor-sixth: 1.6;
+$fifth: 1.5;
+$augmented-fourth: 1.41421;
+$fourth: 1.333333333;
+$major-third: 1.25;
+$minor-third: 1.2;
+$major-second: 1.125;
+$minor-second: 1.066666667;
+
+//font sizes
+$font-sizes: (
+  h1: 2.488rem,
+  h2: 2.074rem,
+  h3: 1.728rem,
+  h4: 1.44rem,
+  h5: 1.2rem,
+  h6: 1rem,
+  p: 0.833rem,
+  small: 0.694rem,
+);
+
+//new grid at 1440px
+
+$grid-breakpoints: (
+  xs: 0,
+  nm: 440px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1366px,
+);
+
+//responsive font size setting
+
+$font-size-base: 1rem;
+$enable-responsive-font-sizes: true;
+$rfs-factor: $minor-third;
+$rfs-unit: px;
+$rfs-breakpoint: 1920px;
+
+//bootstrap grid configuration
+$grid-gutter-width: 16px !default;
+
+//bootstrap colors overides
+$blue: #053b63;
+$red: #eb0026;
+
+$gray-100: #b3b3b3;
+$gray-200: #e0e0e0;
+$gray-300: #a3a3a3;
+$gray-400: #f4f4f4;
+$gray-500: #707070;
+$gray-600: #666666;
+$gray-700: #808080;
+$gray-800: #1a1a1a;
+$gray-900: #454545;
+$grey-900: #808080;
+
+$gray-10: #8a8a8a;
+
+$secondary: $gray-600;
+
+$yellow: #ffc35b;
+
+$orange: #ff8a3b;
+$orange-100: #fa8418;
+$orange-200: #ffc561;
+
+$green: #42bc38;
+$green-30: #38c407;
+
+$text: #001a9a;
+$info: #2b91fe;
+$black: #000000;
+$white: #ffffff;
+$dark: #232323;
+$gray-border: #e8e8e8;
+$tilt: #2dc1b7;
+$border: #e6e6e6;
+$gray-light: #eee;
+
+$blue-100: #aad3ff;
+$blue-200: #eaf5ff;
+$blue-300: #053559;
+$blue-400: #2460b9;
+$blue-500: #206dbf;
+$blue-900: #f1f7ff;
+
+//
+$body-bg: #f6f8fc;
+$border-color-gray: #cccccc;
+
+//Themecolors
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "orange": $orange,
+  ),
+  $theme-colors
+);
+
+//Navs Tab
+$component-active-bg: $info;
+$nav-pills-link-active-color: $green !default;
+$custom-control-indicator-checked-color: white;
+
+//end of bootstrap configuratio
+
+//dashboard setting
+$dashboard: (
+  text: #808080,
+  body: $body-bg,
+  activeColor: #3a36a0,
+);
+
+//sidebar settings
+$sidebar: (
+  backgroundColor: $white,
+  text: $gray-600,
+  activeItem: $body-bg,
+  activeText: $blue,
+);
+
+//menu settings
+$menu: (
+  px: 1rem,
+  py: 0.75rem,
+  activeBg: $body-bg,
+  activeColor: $blue,
+);
+
+//section where main content will be placed
+$content: (
+  px: 2rem,
+  py: 2rem,
+);
+
+// Tabs
+$tabs: (
+  pxy: 1rem,
+  fontColor: $grey-900,
+  activeColor: $blue,
+  radiusSize: 4px,
+);
+
+//table customization
+$table: (
+  headColor: #f8f8fb,
+  headFont: $blue,
+  bodyFont: $grey-900,
+  borderColor: #e6e6e6,
+  paginateBorder: $border-color-gray,
+  paginateText: $gray-600,
+);
+
+//buttons
+$buttons: (
+  fontSize: 0.833em,
+);
+
+$dragdrop: (
+  browseColor: $info,
+);
+
+$login: (
+  backgroundColor: #f8f8fb,
+);
+
+$bar: (
+  lightYellow: #ffc35b,
+  lightGreen: #82d86d,
+  lightBlue: #6ad7f9,
+  lightOrange: #f98c6a,
+);
+
+$approval: (
+  ps: 0.5rem,
+  pxy: 0.75rem,
+  px: 1rem,
+  py: 2rem,
+  boderColor: $border-color-gray,
+  tabDetails: #ededf0,
+  activeColor: #3a36a0,
+  pendingColor: $border-color-gray,
+);
+
+$list-process: (
+  "active-bg": $blue,
+  "link-color": $gray-600,
+  "active-color": white,
+  "px": 1rem,
+  "py": 0.5rem,
+);
+
+//Buttons
+
+$btn-font-size: map-get($buttons, fontSize);
+
+//button regular
+$input-btn-padding-y: 0.5rem !default;
+$input-btn-padding-x: 1rem !default;
+
+//button large
+$input-btn-padding-y-lg: 0.5rem !default;
+$input-btn-padding-x-lg: 1rem !default;
+$input-btn-font-size-lg: map-get($font-sizes, p);
+
+//button small
+
+$input-btn-padding-y-sm: 0.25rem !default;
+$input-btn-padding-x-sm: 0.75rem !default;
+$input-btn-font-size-sm: 13px;
+
+$input-btn-line-height: 1.25;
+$input-info-color: #9c9ad0;
+
+//form elements
+$input-padding-y: 0.5rem;
+$input-padding-x: 0.75rem;
+
+$input-padding-y-sm: 0.125rem;
+$input-padding-x-sm: 0.5rem;
+$input-font-size-sm: 0.7rem;
+
+//$input-font-family:
+$input-font-size: map-get($font-sizes, p);
+$input-color: $gray-600;
+$input-bg: $white;
+$input-border-width: 1px;
+$input-border-radius: 4px;
+$input-border-color: $gray-200;
+$input-height: ($font-size-base * $input-btn-line-height) +
+  ($input-btn-padding-y * 2) - (0.125rem);
+$input-placeholder-color: #909;
+
+//$input-box-shadow
+$input-placeholder-color: $secondary;
+
+$form-group-margin-bottom: 8px;
+//$input-focus-color
+$input-focus-border-color: $info;
+//$input-focus-bg:red;
+$input-box-shadow: inset 0 1px 1px rgba($black, 0.075);
+$input-focus-box-shadow: none;
+//$input-btn-focus-color:rgba($component-active-bg, .25) !default;
+
+//Input readonly
+$input-disabled-bg: $gray-400;
+
+//label spacing
+
+//form-row gap
+
+$form-grid-gutter-width: 16px;
+
+//alert
+
+$alert-padding-y: 0.5rem;
+$alert-padding-x: 0.75rem;
+$alert-margin-bottom: 1rem;
+$alert-border-radius: 4px;
+$alert-link-font-weight: 400;
+$alert-border-width: 1px;
+
+$register: (
+  px: 2rem,
+  py: 3.5rem,
+  pxy: 4.5rem,
+  headColor: #f8f8fb,
+  radiusSize: 4px,
+  infoColor: $input-info-color,
+  linkColor: $info,
+);
+
+//Pagination
+$pagination-border-color: $border-color-gray;
+$pagination-padding-y: 0.25rem;
+$pagination-padding-x: 0.5rem;
+$pagination-hover-color: white;
+$pagination-hover-bg: $info;
+$pagination-active-bg: $info;
+$pagination-focus-outline: 0;
+
+//Modal
+$modal-md: 560px;
+
+//Tooltip
+$tooltip-color: white;
+$tooltip-bg: $blue;

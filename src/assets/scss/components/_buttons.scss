@@ -1,0 +1,63 @@
+button {
+  span {
+    @include rfs(map-get($font-sizes, small));
+    margin-left: 0.5rem;
+  }
+}
+
+.btn {
+  &-border {
+    border: 2px dotted $border;
+    padding: 0.5rem;
+    text-align: center;
+    i {
+      @include des;
+    }
+    @include hover {
+      cursor: pointer;
+    }
+  }
+  &.btn-outline-success {
+    background-color: white;
+    &:hover {
+      background-color: $success;
+    }
+  }
+
+  &--icon {
+    &-only {
+      display: flex;
+      width: 32px;
+      height: 32px;
+      padding: 8px;
+      font-size: 16px;
+      line-height: 1;
+    }
+  }
+}
+
+$theme-colors: map-merge(
+  (
+    "purple": #8268f1,
+    "lpurple": $input-info-color,
+    "white": #ffffff,
+    "tilt": #2dc1b7,
+    "light2": #f6f8fc,
+    "orange": $orange,
+  ),
+  $theme-colors
+);
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+  }
+  //for text color class
+  @include text-emphasis-variant(".text-#{$color}", $value);
+
+  //for alert
+  .alert-#{$color} {
+    background-color: rgba($value, 0.12);
+    color: $value;
+  }
+}

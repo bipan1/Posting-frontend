@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Teko&display=swap");
+
+// Bootstrap
+// Set to false to hide warnings when using any of the deprecated mixins and functions that are planned to be removed in v5.
+$enable-deprecation-messages: false;
+
+//customizing bootstrap
+@import "./assets/scss/abstracts/variables";
+
+@import "./assets/scss/frameworks/cbootstrap";
+
+@import "./icon.css";
+
+//progress bar css
+
+
+//slick slider
+
+@import "./assets/scss/abstracts/mixins";
+
+@import "./assets/scss/base/base";
+@import "./assets/scss/base/typography";
+@import "./assets/scss/base/utilities";
+@import "./assets/scss/components/card";
+@import "./assets/scss/components/buttons";
+@import "./assets/scss/components/commentList";
+@import "./assets/scss/components/login";
+@import "./assets/scss/components/loader";
+@import "./assets/scss/components/form";
+@import "./assets/scss/components/dropdown";
+// @import "../node_modules/react-checkbox-tree/lib/react-checkbox-tree.css";
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+
+html,
+body {
+  @include respond(xxl, min) {
+    font-size: 1.1em !important;
+  }
+}
+
+
+.layout__wrapper {
+  position: relative;
+  min-height: 100vh;
+}
+
+.content__wrapper {
+  min-height: 90vh;
+}

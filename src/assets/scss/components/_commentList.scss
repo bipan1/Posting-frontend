@@ -1,0 +1,174 @@
+.commentList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  
+    li {
+      display: flex;
+  
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+      .imgcomposition {
+        flex-shrink: 0;
+        margin-right: 0.5rem;
+        align-items: flex-start;
+      }
+  
+      .comment {
+        @include des;
+        h6 {
+          margin-bottom: 0.25rem;
+          @include des;
+          font-weight: 600;
+  
+          span {
+            font-weight: 400;
+            color: $secondary;
+            display: inline-block;
+            margin-left: 0.5rem;
+          }
+          margin-bottom: 0.25rem;
+        }
+        p {
+          color: black;
+          line-height: 20px;
+          font-size: 15px;
+        }
+        a {
+          color: $secondary;
+          margin-top: 0.25rem;
+          @include hover-focus {
+            color: $blue;
+          }
+          &:not(:last-child) {
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .files{
+    &--upload{
+      position: relative;
+      border: 1px dashed $gray-500;
+      height: 210px;
+      // @include media-breakpoint-down(md){
+      //   height: 200px;
+      // }
+      .imagePlaceholder{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: white;
+        width: 100%;
+        height: 100%;
+       
+        pointer-events: visible;
+        display: none;
+        &:before{
+          content:'\e948';
+          font-family: 'icomoon' !important;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%) rotate(0);
+          font-size: 32px;
+          color: $blue;
+          opacity: 0;
+          transition: .2s ease-in opacity,.2s ease-in transform;
+        }
+        img{
+          max-width: 100%;
+         
+  
+        }
+  
+        &:hover{
+          filter: brightness(.8);
+          cursor: pointer;
+  
+          
+        }
+       
+      }
+  
+      &:hover {
+        cursor: pointer;
+        .imagePlaceholder{
+          &:before{
+            transform: translate(-50%,-50%) rotate(360deg);
+              opacity: 1;
+          }
+        }
+      }
+  
+     
+      label{
+        height: 100%;
+        color: $gray-800;
+        @include rfs(map-get($font-sizes,p));
+        border-radius: 4px;
+        margin-bottom: 0;
+        // padding:0 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        cursor: pointer;
+        
+        span{
+        
+          color: $info;
+        }
+      }
+      
+     }
+     &--display{
+       width: 100%;
+       height: 210px;
+       position: relative;
+       overflow: hidden;
+       .placeholder{
+         display: block;
+         width: 100%;
+         height: 100%;
+         background-color:#cccccc ;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+       }
+       img{
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+       }
+  
+       input[type='file']{
+         display: none;
+       }
+       label{
+         background-color: $dark;
+         color:white;
+         display: block;
+         position: absolute;
+         width: 100%;
+         padding:.5rem 1rem;
+         bottom: 0;
+         margin:0;
+         transform: translateY(60px);
+         transition: all .2s;
+         &:hover{
+           cursor: pointer;
+         }
+       }
+       &:hover{
+         label{
+           transform: translateY(0);
+         }
+       }
+     }
+    
+  }

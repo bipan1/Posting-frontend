@@ -1,0 +1,85 @@
+.dropdown {
+  overflow: visible !important;
+
+  &:hover {
+    cursor: pointer;
+  }
+  &-menu {
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    padding: 0;
+    border-color: transparent;
+  }
+  &-item {
+    font-weight: 600;
+    color: $secondary;
+    &:hover {
+      background-color: #f8f8fb;
+      color: $blue;
+    }
+  }
+  .dropdown {
+    &--filter {
+      width: 580px;
+      padding: 1rem;
+
+      .form-row {
+        margin-bottom: 1rem;
+      }
+    }
+
+    &--checkbox {
+      border-radius: 4px;
+      width: 132px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+      padding: 0.5rem;
+    }
+  }
+
+  &-table {
+    .ic-more {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .dropdown-menu {
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+      padding: 0;
+      border-color: transparent;
+
+      .dropdown-item {
+        font-weight: 600;
+        color: $secondary;
+        &:hover {
+          background-color: #f8f8fb;
+          color: $blue;
+        }
+      }
+    }
+  }
+
+  &-shortcut {
+    left: calc(var(--shortcut-width) - 1.5rem) !important;
+    max-width: 150px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    padding: 0;
+    border-color: transparent;
+
+    .dropdown-item {
+      font-weight: 600;
+      color: $secondary;
+      padding: 0.25rem 1rem;
+      &:hover {
+        background-color: #f8f8fb;
+        color: $blue;
+      }
+    }
+  }
+  &_lg {
+    min-width: 250px;
+    padding: 0.75rem !important;
+  }
+}

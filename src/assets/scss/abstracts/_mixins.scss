@@ -1,0 +1,102 @@
+//Media Query Manager
+/*
+0-600px:phone
+600-900px:Tablet portrait
+900-1200px:Tablet Landscape
+[1200-1800] is where our normal styles apply
+1800px +:Big desktop
+*/
+
+@mixin respond-phone {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+/*
+$breakpoint arguement choices
+-phone
+-tab-part
+-tab-land
+-big-desktop
+1em=16px
+
+*/
+
+// Responsive Mixins
+
+// etc
+
+@mixin respond($breakpoint, $media: max) {
+  @if $breakpoint==iphone {
+    @media (#{$media}-width:24rem) {
+      @content;
+    } //576px
+  }
+
+  @if $breakpoint==phone {
+    @media (#{$media}-width:36rem) {
+      @content;
+    } //576px
+  }
+
+  @if $breakpoint==sm {
+    @media (#{$media}-width:48rem) {
+      @content;
+    } //768px
+  }
+
+  @if $breakpoint==md {
+    @media (#{$media}-width:62rem) {
+      @content;
+    } //992px
+  }
+
+  @if $breakpoint==lg {
+    @media (#{$media}-width:75rem) {
+      @content;
+    } //1200px
+  }
+
+  @if $breakpoint==xl {
+    @media (#{$media}-width:85.375rem) {
+      @content;
+    } //1920px
+  }
+
+  @if $breakpoint==xxl {
+    @media (#{$media}-width:1600px) {
+      @content;
+    } //1920px
+  }
+}
+
+@mixin scrollable($thumb: $blue, $track: $gray-100) {
+  overflow: auto;
+  //padding-right: .5rem;
+
+  /* width */
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: $track;
+    border-radius: 4px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: rgba($thumb, 0.8);
+    border-radius: 4px;
+    // cursor: pointer;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: $thumb;
+    cursor: pointer;
+  }
+}

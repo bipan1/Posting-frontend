@@ -1,0 +1,8 @@
+.styleguide-frame {
+    min-height: 20px;
+}
+
+div[data-testid="preview-wrapper"] {
+    position: relative;
+    transform: translate3d(0,0,0);
+}

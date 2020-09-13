@@ -1,0 +1,53 @@
+html,
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  outline: 0;
+
+  color: inherit;
+
+  // &:visited {
+  //   text-decoration: none;
+  //   transition: all 0.3s ease-in-out;
+  //   -webkit-transition: all 0.3s ease-in-out;
+  //   -moz-transition: all 0.3s ease-in-out;
+  //   -o-transition: all 0.3s ease-in-out;
+  //   outline: 0;
+
+  //   color: inherit;
+  // }
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+  &:focus {
+    text-decoration: none;
+    outline: 0;
+    color: inherit;
+  }
+}
+
+:root {
+  --sidebar-width: 235px;
+  --sidebar-bg: #043559;
+
+  --menu-color: #a8d2ff;
+  --menu-activeBg: #ffc35b;
+  --menu-activeColor: #032c9c;
+  --shortcut-width: 56px;
+  --shortcut-bg: #053b63;
+  --action-color: #2b91fe;
+  --imgcomposition-width: 24px;
+  @include respond(xxl, min) {
+    --sidebar-width: 250px;
+  }
+}

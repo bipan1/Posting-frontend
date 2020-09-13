@@ -1,0 +1,198 @@
+// Heading Tags and Classes
+
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
+
+@mixin h1 {
+  @include rfs(2.488rem); //39.81px
+  margin: 0;
+}
+@mixin h2 {
+  @include rfs(2.074rem); //33.18px
+  margin: 0;
+}
+@mixin h3 {
+  @include rfs(1.728rem); //27.65px
+  margin: 0;
+}
+@mixin h4 {
+  @include rfs(1.44rem); //23.04px
+  margin: 0;
+}
+@mixin h5 {
+  @include rfs(1.2rem); //19.20px
+  margin: 0;
+}
+@mixin h6 {
+  @include rfs(1rem); //39.81px
+  margin: 0;
+}
+@mixin des {
+  @include rfs(0.833rem); //13.33px
+  margin: 0;
+}
+@mixin small {
+  @include rfs(0.694rem); //11.11px
+}
+
+h1,
+.h1 {
+  @include rfs(2.488rem); //39.81px
+  margin: 0;
+}
+h2,
+.h2 {
+  @include rfs(2.074rem); //33.18px
+  margin: 0;
+}
+h3,
+.h3 {
+  @include rfs(1.728rem); //27.65px
+  margin: 0;
+}
+
+h4,
+.h4 {
+  @include rfs(1.44rem); //23.04px
+  margin: 0;
+}
+h5,
+.h5 {
+  @include rfs(1.2rem); //19.20px
+  margin: 0;
+}
+h6,
+.h6 {
+  @include rfs(1rem); //16px
+  margin: 0;
+}
+
+p,
+.des {
+  @include rfs(0.833rem); //13.33px
+  margin: 0;
+}
+small,
+.small {
+  @include rfs(0.694rem); //11.11px
+}
+
+// Font weight
+.font-regular {
+  font-weight: 400;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+label,
+.label {
+  margin-bottom: 0.25rem;
+  @include rfs(map-get($font-sizes, p));
+  font-weight: 600;
+}
+
+.custom-control-label {
+  font-weight: 400;
+  color: $gray-600;
+}
+
+.heading {
+  &--form {
+    font-weight: 700;
+    color: $blue;
+  }
+
+  &--drop {
+    @include des;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    &:after {
+      content: "\e956";
+      display: block;
+      margin-left: 0.5rem;
+      color: $secondary;
+      font-family: "icomoon";
+      font-size: 8px;
+      transition: 0.2s transform;
+      margin-bottom: 2px;
+    }
+
+    &[aria-expanded="true"] {
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &--status {
+    @include des;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    &:before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      display: block;
+      border-radius: 8px;
+      margin-right: 0.5rem;
+      background-color: unset;
+    }
+
+    &.incomplete {
+      color: $orange;
+      &:before {
+        background-color: $yellow;
+      }
+    }
+    &.inprogress {
+      color: $info;
+      &:before {
+        background-color: $info;
+      }
+    }
+    &.complete {
+      color: $green;
+      &:before {
+        background-color: $success;
+      }
+    }
+  }
+  &-01 {
+    @include rfs(14px);
+    color: $blue;
+    font-weight: 600;
+  }
+}
+
+.textbox {
+  h6 {
+    @include rfs(map-get($font-sizes, p));
+  }
+}
+
+.text {
+  &-service {
+    h6 {
+      @include des;
+      color: $secondary;
+      font-weight: 400;
+    }
+    p {
+      @include h6;
+      color: $dark;
+      font-weight: 600;
+    }
+  }
+}
